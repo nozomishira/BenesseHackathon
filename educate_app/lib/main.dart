@@ -124,6 +124,7 @@ class _MyHomePageState extends State<MyHomePage> {
                           textAlign: TextAlign.center,
                           style: TextStyle(
                             fontWeight: FontWeight.bold,
+                            color: Colors.black,
                           ),
                         ),
                         onPressed: () {
