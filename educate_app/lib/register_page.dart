@@ -25,7 +25,9 @@ class _RegisterNotePageState extends State<RegisterNotePage> {
           child: Column(
           children: [
 
+
             Row(
+
               crossAxisAlignment: CrossAxisAlignment.center,
 
               children: [
