@@ -1,3 +1,4 @@
+import 'package:educate_app/home_page.dart';
 import 'package:educate_app/register_page.dart';
 import 'package:flutter/material.dart';
 
@@ -31,7 +32,7 @@ class MyHomePage extends StatefulWidget {
 
 class _MyHomePageState extends State<MyHomePage> {
   // This widget is the root of your application.
-  final items = List<String>.generate(10000, (i) => "Item $i");
+  final items = List<String>.generate(10, (i) => "Item $i");
 
   @override
   Widget build(BuildContext context) {
@@ -106,8 +107,27 @@ class _MyHomePageState extends State<MyHomePage> {
                       width: 160.0,
                       height: 10,
                       color: Colors.red,
+                      child: FlatButton(
+                        child: Text(
+                          'Home',
+                          textAlign: TextAlign.center,
+                          style: TextStyle(
+                              fontWeight: FontWeight.bold, color: Colors.black),
+                        ),
+                        onPressed: () {
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => HomePage()));
+                        },
+                      ),
+                    ),
+                    Container(
+                      width: 160.0,
+                      height: 3,
+                      color: Colors.green,
                       child: Text(
-                        'Home',
+                        '投稿一覧',
                         textAlign: TextAlign.center,
                         style: TextStyle(
                           fontWeight: FontWeight.bold,
@@ -133,18 +153,6 @@ class _MyHomePageState extends State<MyHomePage> {
                               MaterialPageRoute(
                                   builder: (context) => RegisterNotePage()));
                         },
-                      ),
-                    ),
-                    Container(
-                      width: 160.0,
-                      height: 3,
-                      color: Colors.green,
-                      child: Text(
-                        '過去リスト',
-                        textAlign: TextAlign.center,
-                        style: TextStyle(
-                          fontWeight: FontWeight.bold,
-                        ),
                       ),
                     ),
                     Container(
@@ -184,6 +192,23 @@ class _MyHomePageState extends State<MyHomePage> {
                       ),
                     ),
                   ],
+                ),
+              ),
+              Expanded(
+                child: ListView.builder(
+                  itemCount: items.length,
+                  itemBuilder: (context, index) {
+                    return ListTile(
+                      // onTap: () async {
+                      //   Navigator.push(
+                      //     context,
+                      //     MaterialPageRoute(
+                      //         builder: (context) => VideoPlayerPage()),
+                      //   );
+                      // },
+                      contentPadding: EdgeInsets.all(8),
+                    );
+                  },
                 ),
               ),
             ],
