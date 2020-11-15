@@ -7,7 +7,6 @@ void main() {
 }
 
 class MyApp extends StatelessWidget {
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -16,203 +15,81 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-      home: MyHomePage(title: 'Flutter Demo Home Page'),
+      home: LoginPage(title: 'Flutter Demo Home Page'),
     );
   }
 }
 
-class MyHomePage extends StatefulWidget {
-  MyHomePage({Key key, this.title}) : super(key: key);
+class LoginPage extends StatefulWidget {
+  LoginPage({Key key, this.title}) : super(key: key);
 
   final String title;
 
   @override
-  _MyHomePageState createState() => _MyHomePageState();
+  _LoginPage createState() => _LoginPage();
 }
 
-class _MyHomePageState extends State<MyHomePage> {
-  // This widget is the root of your application.
-  final items = List<String>.generate(10, (i) => "Item $i");
+class _LoginPage extends State<LoginPage> {
+  var _userController = TextEditingController();
+  var _passwordController = TextEditingController();
+  var _text = '';
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      theme: ThemeData(
-        primaryColor: Colors.white,
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('Edit Controller'),
       ),
-      home: Scaffold(
-        appBar: AppBar(
-          leading: Icon(Icons.videocam),
-          title: const Text(
-            'Note一覧',
-            textAlign: TextAlign.start,
-          ),
-          actions: <Widget>[
-            SizedBox(
-              width: 40,
-              child: FlatButton(
-                child: Icon(Icons.search),
-                onPressed: () {
-                  //to do anything
-                },
-              ),
-            ),
-            SizedBox(
-              width: 44,
-              child: FlatButton(
-                child: Icon(Icons.more_vert),
-                onPressed: () {
-                  //to do anything
-                },
-              ),
-            ),
-          ],
-        ),
-        body: Container(
-          child: Column(
-            children: <Widget>[
-              Container(
-                color: Colors.white30,
-                child: Row(
-                  children: <Widget>[
-                    SizedBox(
-                      width: 60,
-                      height: 60,
-                      child: Image.network(
-                        'https://everydayicons.jp/wp/wp-content/themes/everydayicons/icons/thumbs/ei-child_face.png',
-                        height: 60.0,
-                        width: 60.0,
-                      ),
-                    ),
-                    const SizedBox(
-                      width: 30,
-                    ),
-                    Container(
-                      child: Text(
-                        'みんなのノート',
-                        style: TextStyle(
-                          fontSize: 20,
-                        ),
-                      ),
-                    ),
-                  ],
+      body: Container(
+        padding: EdgeInsets.all(32.0),
+        child: Column(
+          children: <Widget>[
+            Text('Login'),
+            Row(
+              children: <Widget>[
+                Expanded(
+                  flex: 3,
+                  child: Text('Username: '),
                 ),
-              ),
-              Container(
-                height: 20,
-                child: ListView(
-                  scrollDirection: Axis.horizontal,
-                  children: <Widget>[
-                    Container(
-                      width: 160.0,
-                      height: 10,
-                      color: Colors.red,
-                      child: FlatButton(
-                        child: Text(
-                          'Home',
-                          textAlign: TextAlign.center,
-                          style: TextStyle(
-                              fontWeight: FontWeight.bold, color: Colors.black),
-                        ),
-                        onPressed: () {
-                          Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                  builder: (context) => HomePage()));
-                        },
-                      ),
-                    ),
-                    Container(
-                      width: 160.0,
-                      height: 3,
-                      color: Colors.green,
-                      child: Text(
-                        '投稿一覧',
-                        textAlign: TextAlign.center,
-                        style: TextStyle(
-                          fontWeight: FontWeight.bold,
-                        ),
-                      ),
-                    ),
-                    Container(
-                      width: 160.0,
-                      height: 3,
-                      color: Colors.blue,
-                      child: ElevatedButton(
-                        child: Text(
-                          'ノート投稿',
-                          textAlign: TextAlign.center,
-                          style: TextStyle(
-                            fontWeight: FontWeight.bold,
-                            color: Colors.black,
-                          ),
-                        ),
-                        onPressed: () {
-                          Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                  builder: (context) => RegisterNotePage()));
-                        },
-                      ),
-                    ),
-                    Container(
-                      width: 160.0,
-                      height: 3,
-                      color: Colors.yellow,
-                      child: Text(
-                        'コミュニティ',
-                        textAlign: TextAlign.center,
-                        style: TextStyle(
-                          fontWeight: FontWeight.bold,
-                        ),
-                      ),
-                    ),
-                    Container(
-                      width: 160.0,
-                      height: 3,
-                      color: Colors.orange,
-                      child: Text(
-                        '教員ページ',
-                        textAlign: TextAlign.center,
-                        style: TextStyle(
-                          fontWeight: FontWeight.bold,
-                        ),
-                      ),
-                    ),
-                    Container(
-                      width: 160.0,
-                      height: 3,
-                      color: Colors.deepPurpleAccent,
-                      child: Text(
-                        '概要',
-                        textAlign: TextAlign.center,
-                        style: TextStyle(
-                          fontWeight: FontWeight.bold,
-                        ),
-                      ),
-                    ),
-                  ],
+                Expanded(
+                  flex: 7,
+                  child: TextField(
+                    controller: _userController,
+                  ),
                 ),
-              ),
-              Expanded(
-                child: ListView.builder(
-                  itemCount: items.length,
-                  itemBuilder: (context, index) {
-                    return ListTile(
-                      // onTap: () async {
-                      //   Navigator.push(
-                      //     context,
-                      //     MaterialPageRoute(
-                      //         builder: (context) => VideoPlayerPage()),
-                      //   );
-                      // },
-                      contentPadding: EdgeInsets.all(8),
+              ],
+            ),
+            Row(
+              children: <Widget>[
+                Expanded(
+                  flex: 3,
+                  child: Text('Password: '),
+                ),
+                Expanded(
+                  flex: 7,
+                  child: TextField(
+                    controller: _passwordController,
+                    obscureText: true,
+                  ),
+                )
+              ],
+            ),
+            Container(
+              padding: EdgeInsets.all(16.0),
+              child: RaisedButton(
+                  child: Text('ログイン'),
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => HomePage()),
                     );
-                  },
-                ),
-              ),
-            ],
-          ),
+                  }),
+            ),
+            Container(
+              padding: EdgeInsets.all(8.0),
+              child: Text(_text),
+            )
+          ],
         ),
       ),
     );
