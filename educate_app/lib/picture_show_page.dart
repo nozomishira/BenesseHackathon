@@ -1,23 +1,22 @@
-import 'package:educate_app/fuculty_list_page.dart';
 import 'package:flutter/material.dart';
-import 'package:educate_app/main.dart';
-import 'package:educate_app/picture_show_page.dart';
+import 'package:educate_app/home_page.dart';
+import 'package:educate_app/register_page.dart';
 import 'package:educate_app/fuculty_list_page.dart';
 
-class HomePage extends StatefulWidget {
+class PictureShow extends StatefulWidget {
   @override
-  _HomePageState createState() => _HomePageState();
+  _PictureShowState createState() => _PictureShowState();
 }
 
-class _HomePageState extends State<HomePage> {
+class _PictureShowState extends State<PictureShow> {
+  final items = List<String>.generate(10, (i) => "Item $i");
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Colors.cyan[300],
         leading: Icon(Icons.videocam),
         title: const Text(
-          'Home',
+          'Note一覧',
           textAlign: TextAlign.start,
         ),
         actions: <Widget>[
@@ -42,8 +41,6 @@ class _HomePageState extends State<HomePage> {
         ],
       ),
       body: Container(
-        //color: Colors.cyan50,
-        color: Colors.cyan[50],
         child: Column(
           children: <Widget>[
             Container(
@@ -64,7 +61,7 @@ class _HomePageState extends State<HomePage> {
                   ),
                   Container(
                     child: Text(
-                      'ホーム画面',
+                      'みんなのノート',
                       style: TextStyle(
                         fontSize: 20,
                       ),
@@ -101,20 +98,12 @@ class _HomePageState extends State<HomePage> {
                     width: 160.0,
                     height: 3,
                     color: Colors.green,
-                    child: FlatButton(
-                      child: Text(
-                        '投稿一覧',
-                        textAlign: TextAlign.center,
-                        style: TextStyle(
-                          fontWeight: FontWeight.bold,
-                        ),
+                    child: Text(
+                      '投稿一覧',
+                      textAlign: TextAlign.center,
+                      style: TextStyle(
+                        fontWeight: FontWeight.bold,
                       ),
-                      onPressed: () {
-                        Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                                builder: (context) => PictureShow()));
-                      },
                     ),
                   ),
                   Container(
@@ -130,6 +119,12 @@ class _HomePageState extends State<HomePage> {
                           color: Colors.black,
                         ),
                       ),
+                      onPressed: () {
+                        // Navigator.push(
+                        //     context,
+                        //     MaterialPageRoute(
+                        //         builder: (context) => RegisterNotePage()));
+                      },
                     ),
                   ),
                   Container(
@@ -150,7 +145,7 @@ class _HomePageState extends State<HomePage> {
                     color: Colors.orange,
                     child: ElevatedButton(
                       child: Text(
-                        '学部イベント',
+                        '学部イベント情報',
                         textAlign: TextAlign.center,
                         style: TextStyle(
                           fontWeight: FontWeight.bold,
@@ -180,88 +175,62 @@ class _HomePageState extends State<HomePage> {
                 ],
               ),
             ),
-            FlatButton(
-              onPressed: () {
-                Navigator.push(context,
-                    MaterialPageRoute(builder: (context) => PictureShow()));
-              },
-              child: Container(
-                child: Card(
-                  color: Colors.cyanAccent,
-                  margin: const EdgeInsets.only(
-                      left: 20.0, top: 20.0, right: 20.0, bottom: 20.0),
-                  child: Container(
-                    margin: const EdgeInsets.all(10.0),
-                    width: 300,
-                    height: 100,
+            Expanded(
+              child: ListView(
+                children: <Widget>[
+                  Card(
                     child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.center,
-                      mainAxisAlignment: MainAxisAlignment.center,
                       children: <Widget>[
+                        Image.network('https://picsum.photos/250?image=9'),
                         Text(
-                          'ノート投稿',
-                          style: TextStyle(fontSize: 30),
-                        ),
+                          '情報演習　微分積分',
+                          style: TextStyle(
+                            fontSize: 20,
+                          ),
+                        )
                       ],
                     ),
                   ),
-                ),
-              ),
-            ),
-            FlatButton(
-              // onPressed: () {
-              //   Navigator.push(context,
-              //       MaterialPageRoute(builder: (context) => PictureShow()));
-              // },
-              child: Container(
-                child: Card(
-                  color: Colors.cyanAccent,
-                  margin: const EdgeInsets.only(
-                      left: 20.0, top: 20.0, right: 20.0, bottom: 20.0),
-                  child: Container(
-                    margin: const EdgeInsets.all(10.0),
-                    width: 300,
-                    height: 100,
+                  Card(
                     child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.center,
-                      mainAxisAlignment: MainAxisAlignment.center,
                       children: <Widget>[
+                        Image.network('https://picsum.photos/250?image=9'),
                         Text(
-                          '学部適性検査',
-                          style: TextStyle(fontSize: 30),
-                        ),
+                          '情報演習　微分積分',
+                          style: TextStyle(
+                            fontSize: 20,
+                          ),
+                        )
                       ],
                     ),
                   ),
-                ),
-              ),
-            ),
-            FlatButton(
-              onPressed: () {
-                Navigator.push(context,
-                    MaterialPageRoute(builder: (context) => FucultyListPage()));
-              },
-              child: Container(
-                child: Card(
-                  color: Colors.cyanAccent,
-                  margin: const EdgeInsets.only(
-                      left: 20.0, top: 20.0, right: 20.0, bottom: 20.0),
-                  child: Container(
-                    margin: const EdgeInsets.all(10.0),
-                    width: 300,
-                    height: 100,
+                  Card(
                     child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.center,
-                      mainAxisAlignment: MainAxisAlignment.center,
                       children: <Widget>[
+                        Image.network('https://picsum.photos/250?image=9'),
                         Text(
-                          '学部イベント情報',
-                          style: TextStyle(fontSize: 30),
-                        ),
+                          '情報演習　微分積分',
+                          style: TextStyle(
+                            fontSize: 20,
+                          ),
+                        )
                       ],
                     ),
                   ),
-                ),
+                  Card(
+                    child: Column(
+                      children: <Widget>[
+                        Image.network('https://picsum.photos/250?image=9'),
+                        Text(
+                          '情報演習　微分積分',
+                          style: TextStyle(
+                            fontSize: 20,
+                          ),
+                        )
+                      ],
+                    ),
+                  ),
+                ],
               ),
             ),
           ],
