@@ -3,6 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:educate_app/main.dart';
 import 'package:educate_app/picture_show_page.dart';
 import 'package:educate_app/fuculty_list_page.dart';
+import 'package:educate_app/register_page.dart';
+import 'package:educate_app/tekisei1.dart';
 
 class HomePage extends StatefulWidget {
   @override
@@ -130,18 +132,33 @@ class _HomePageState extends State<HomePage> {
                           color: Colors.black,
                         ),
                       ),
+                      onPressed: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => RegisterNotePage()));
+                      },
                     ),
                   ),
                   Container(
                     width: 160.0,
                     height: 3,
                     color: Colors.yellow,
-                    child: Text(
-                      '学部適性検査',
-                      textAlign: TextAlign.center,
-                      style: TextStyle(
-                        fontWeight: FontWeight.bold,
+                    child: ElevatedButton(
+                      child: Text(
+                        '学部適性検査',
+                        textAlign: TextAlign.center,
+                        style: TextStyle(
+                          fontWeight: FontWeight.bold,
+                          color: Colors.black,
+                        ),
                       ),
+                      onPressed: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => TekiseiFirst()));
+                      },
                     ),
                   ),
                   Container(
@@ -199,7 +216,7 @@ class _HomePageState extends State<HomePage> {
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: <Widget>[
                         Text(
-                          'ノート投稿',
+                          'ノート一覧',
                           style: TextStyle(fontSize: 30),
                         ),
                       ],
@@ -209,10 +226,10 @@ class _HomePageState extends State<HomePage> {
               ),
             ),
             FlatButton(
-              // onPressed: () {
-              //   Navigator.push(context,
-              //       MaterialPageRoute(builder: (context) => PictureShow()));
-              // },
+              onPressed: () {
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => TekiseiFirst()));
+              },
               child: Container(
                 child: Card(
                   color: Colors.cyanAccent,

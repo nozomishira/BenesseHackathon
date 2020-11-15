@@ -1,6 +1,9 @@
+import 'package:educate_app/picture_show_page.dart';
+import 'package:educate_app/tekisei1.dart';
 import 'package:flutter/material.dart';
 import 'package:educate_app/home_page.dart';
 import 'package:educate_app/information_engeneering_page.dart';
+import 'package:educate_app/register_page.dart';
 
 class FucultyListPage extends StatefulWidget {
   @override
@@ -14,7 +17,7 @@ class _FucultyListPageState extends State<FucultyListPage> {
       appBar: AppBar(
         leading: Icon(Icons.videocam),
         title: const Text(
-          'Note一覧',
+          '学部情報一覧',
           textAlign: TextAlign.start,
         ),
         actions: <Widget>[
@@ -96,12 +99,20 @@ class _FucultyListPageState extends State<FucultyListPage> {
                     width: 160.0,
                     height: 3,
                     color: Colors.green,
-                    child: Text(
-                      '投稿一覧',
-                      textAlign: TextAlign.center,
-                      style: TextStyle(
-                        fontWeight: FontWeight.bold,
+                    child: FlatButton(
+                      child: Text(
+                        '投稿一覧',
+                        textAlign: TextAlign.center,
+                        style: TextStyle(
+                          fontWeight: FontWeight.bold,
+                        ),
                       ),
+                      onPressed: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => PictureShow()));
+                      },
                     ),
                   ),
                   Container(
@@ -118,10 +129,10 @@ class _FucultyListPageState extends State<FucultyListPage> {
                         ),
                       ),
                       onPressed: () {
-                        // Navigator.push(
-                        //     context,
-                        //     MaterialPageRoute(
-                        //         builder: (context) => RegisterNotePage()));
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => RegisterNotePage()));
                       },
                     ),
                   ),
@@ -129,12 +140,20 @@ class _FucultyListPageState extends State<FucultyListPage> {
                     width: 160.0,
                     height: 3,
                     color: Colors.yellow,
-                    child: Text(
-                      '学部適性検査',
-                      textAlign: TextAlign.center,
-                      style: TextStyle(
-                        fontWeight: FontWeight.bold,
+                    child: FlatButton(
+                      child: Text(
+                        '学部適性検査',
+                        textAlign: TextAlign.center,
+                        style: TextStyle(
+                          fontWeight: FontWeight.bold,
+                        ),
                       ),
+                      onPressed: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => TekiseiFirst()));
+                      },
                     ),
                   ),
                   Container(
