@@ -1,3 +1,4 @@
+import 'package:educate_app/tekisei1.dart';
 import 'package:flutter/material.dart';
 import 'package:educate_app/home_page.dart';
 import 'package:educate_app/register_page.dart';
@@ -14,6 +15,7 @@ class _PictureShowState extends State<PictureShow> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        backgroundColor: Colors.cyan[300],
         leading: Icon(Icons.videocam),
         title: const Text(
           'Note一覧',
@@ -41,6 +43,7 @@ class _PictureShowState extends State<PictureShow> {
         ],
       ),
       body: Container(
+        color: Colors.cyan[50],
         child: Column(
           children: <Widget>[
             Container(
@@ -120,10 +123,10 @@ class _PictureShowState extends State<PictureShow> {
                         ),
                       ),
                       onPressed: () {
-                        // Navigator.push(
-                        //     context,
-                        //     MaterialPageRoute(
-                        //         builder: (context) => RegisterNotePage()));
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => RegisterNotePage()));
                       },
                     ),
                   ),
@@ -131,12 +134,20 @@ class _PictureShowState extends State<PictureShow> {
                     width: 160.0,
                     height: 3,
                     color: Colors.yellow,
-                    child: Text(
-                      '学部適性検査',
-                      textAlign: TextAlign.center,
-                      style: TextStyle(
-                        fontWeight: FontWeight.bold,
+                    child: FlatButton(
+                      child: Text(
+                        '学部適性検査',
+                        textAlign: TextAlign.center,
+                        style: TextStyle(
+                          fontWeight: FontWeight.bold,
+                        ),
                       ),
+                      onPressed: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => TekiseiFirst()));
+                      },
                     ),
                   ),
                   Container(
@@ -181,9 +192,10 @@ class _PictureShowState extends State<PictureShow> {
                   Card(
                     child: Column(
                       children: <Widget>[
-                        Image.network('https://picsum.photos/250?image=9'),
+                        Image.network(
+                            'https://uepweb.net/blog/wp-content/uploads/2018/02/S__22560789-1024x737.jpg'),
                         Text(
-                          '情報演習　微分積分',
+                          '英語　長文読解',
                           style: TextStyle(
                             fontSize: 20,
                           ),
@@ -194,9 +206,10 @@ class _PictureShowState extends State<PictureShow> {
                   Card(
                     child: Column(
                       children: <Widget>[
-                        Image.network('https://picsum.photos/250?image=9'),
+                        Image.network(
+                            'https://www.z-netschool.jp/school/tokyo/akabane/wp-content/uploads/sites/23/2019/04/IMG_2202.jpg'),
                         Text(
-                          '情報演習　微分積分',
+                          '英語　文法',
                           style: TextStyle(
                             fontSize: 20,
                           ),
@@ -207,9 +220,10 @@ class _PictureShowState extends State<PictureShow> {
                   Card(
                     child: Column(
                       children: <Widget>[
-                        Image.network('https://picsum.photos/250?image=9'),
+                        Image.network(
+                            'https://www.z-netschool.jp/school/tokyo/akabane/wp-content/uploads/sites/23/2019/04/IMG_2202.jpg'),
                         Text(
-                          '情報演習　微分積分',
+                          '英語演習　文法',
                           style: TextStyle(
                             fontSize: 20,
                           ),
@@ -220,9 +234,24 @@ class _PictureShowState extends State<PictureShow> {
                   Card(
                     child: Column(
                       children: <Widget>[
-                        Image.network('https://picsum.photos/250?image=9'),
+                        Image.network(
+                            'https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?ixlib=rb-1.2.1&auto=format&fit=crop&w=1052&q=80'),
                         Text(
-                          '情報演習　微分積分',
+                          '英語　単語学習',
+                          style: TextStyle(
+                            fontSize: 20,
+                          ),
+                        )
+                      ],
+                    ),
+                  ),
+                  Card(
+                    child: Column(
+                      children: <Widget>[
+                        Image.network(
+                            'https://kyoiku.sho.jp/wp-content/uploads/2020/06/IMG_9459.jpg'),
+                        Text(
+                          '理科　生物学実験レポート',
                           style: TextStyle(
                             fontSize: 20,
                           ),

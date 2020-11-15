@@ -32,6 +32,14 @@ flutter:
   uses-material-design: true
 
 
-  # assets:
-  #   - images/a_dot_burr.jpeg
-  #   - images/a_dot_ham.jpeg
+  assets:
+    - images/car.png
+    - images/help.png
+    - images/think.png
+    - images/idea.png
+    - images/kougaku.jpg
+    - images/JapanArchi.jpg
+    - images/scienceNote1.jpg
+    - images/MathNote1.jpg
+    - images/mathNote2.jpg
+    - images/hisNote1.jpg

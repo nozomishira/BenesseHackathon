@@ -201,6 +201,30 @@ class _InformationEngineeringPageState
                       ],
                     ),
                   ),
+                  Card(
+                    elevation: 4.0,
+                    margin: const EdgeInsets.all(16.0),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      children: <Widget>[
+                        Image.asset('images/kougaku.jpg'),
+                        _titleAreaSecond(),
+                        _descriptionAreaSecond(),
+                      ],
+                    ),
+                  ),
+                  Card(
+                    elevation: 4.0,
+                    margin: const EdgeInsets.all(16.0),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      children: <Widget>[
+                        Image.asset('images/JapanArchi.jpg'),
+                        _titleAreaThird(),
+                        _descriptionAreaThird(),
+                      ],
+                    ),
+                  ),
                 ],
               ),
             ),
@@ -251,6 +275,112 @@ Widget _titleArea() {
 }
 
 Widget _descriptionArea() {
+  return Container(
+    margin: const EdgeInsets.fromLTRB(16.0, 0.0, 16.0, 16.0),
+    child: Column(
+      children: <Widget>[
+        Text('''
+          機械工学コースは、機械系主要分野である材料工学、設計工学、生産加工学、熱・流体エネルギー工学、計測制御工学を網羅した研究領域を柱として、材料加工分野、エネルギー分野、計測制御分野の3分野に大別し、学部での学習を踏まえた、より高度な専門知識を習得できるようカリキュラム構成されています。 学生は選択した分野での専門領域において高度な研究活動を行います。さらに、専門領域を基軸にして、高度情報化社会に適切に対応できるよう、機械工学コースの専門科目やコース横断科目を選択履修することで、幅広く、ものづくりにおける高度な先端技術に関する専門知識を修得させます。自らの専門領域を確立した研究者や高度専門職業人としての技術者育成を目指します。
+          '''),
+        Text('申し込み:https://www.hiroshima-u.ac.jp/'),
+      ],
+    ),
+  );
+}
+
+Widget _titleAreaSecond() {
+  return Container(
+      margin: EdgeInsets.all(16.0),
+      child: Row(
+        // 1行目
+        children: <Widget>[
+          Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: <Widget>[
+              Container(
+                // 3.1.1行目
+                margin: const EdgeInsets.only(bottom: 4.0),
+                child: Text(
+                  "電子を勉強したい高校生向け",
+                  style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16.0),
+                ),
+              ),
+              Container(
+                // 3.1.2行目
+                child: Text(
+                  "千葉大学",
+                  style: TextStyle(fontSize: 12.0, color: Colors.grey),
+                ),
+              ),
+            ],
+          ),
+          SizedBox(
+            width: 40,
+          ),
+          Icon(
+            //
+            Icons.star,
+            color: Colors.red,
+          ),
+          Text('41'), // 2.3列目
+        ],
+      ));
+}
+
+Widget _descriptionAreaSecond() {
+  return Container(
+    margin: const EdgeInsets.fromLTRB(16.0, 0.0, 16.0, 16.0),
+    child: Column(
+      children: <Widget>[
+        Text('''
+          機械工学コースは、機械系主要分野である材料工学、設計工学、生産加工学、熱・流体エネルギー工学、計測制御工学を網羅した研究領域を柱として、材料加工分野、エネルギー分野、計測制御分野の3分野に大別し、学部での学習を踏まえた、より高度な専門知識を習得できるようカリキュラム構成されています。 学生は選択した分野での専門領域において高度な研究活動を行います。さらに、専門領域を基軸にして、高度情報化社会に適切に対応できるよう、機械工学コースの専門科目やコース横断科目を選択履修することで、幅広く、ものづくりにおける高度な先端技術に関する専門知識を修得させます。自らの専門領域を確立した研究者や高度専門職業人としての技術者育成を目指します。
+          '''),
+        Text('申し込み:https://www.hiroshima-u.ac.jp/'),
+      ],
+    ),
+  );
+}
+
+_titleAreaThird() {
+  return Container(
+      margin: EdgeInsets.all(16.0),
+      child: Row(
+        // 1行目
+        children: <Widget>[
+          Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: <Widget>[
+              Container(
+                // 3.1.1行目
+                margin: const EdgeInsets.only(bottom: 4.0),
+                child: Text(
+                  "日本の建築を勉強したい高校生向け",
+                  style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16.0),
+                ),
+              ),
+              Container(
+                // 3.1.2行目
+                child: Text(
+                  "九州大学",
+                  style: TextStyle(fontSize: 12.0, color: Colors.grey),
+                ),
+              ),
+            ],
+          ),
+          SizedBox(
+            width: 40,
+          ),
+          Icon(
+            //
+            Icons.star,
+            color: Colors.red,
+          ),
+          Text('41'), // 2.3列目
+        ],
+      ));
+}
+
+Widget _descriptionAreaThird() {
   return Container(
     margin: const EdgeInsets.fromLTRB(16.0, 0.0, 16.0, 16.0),
     child: Column(
