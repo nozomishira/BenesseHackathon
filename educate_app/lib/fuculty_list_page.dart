@@ -15,7 +15,7 @@ class _FucultyListPageState extends State<FucultyListPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        leading: Icon(Icons.videocam),
+        leading: Icon(Icons.add_chart),
         title: const Text(
           '学部情報一覧',
           textAlign: TextAlign.start,
@@ -51,11 +51,7 @@ class _FucultyListPageState extends State<FucultyListPage> {
                   SizedBox(
                     width: 60,
                     height: 60,
-                    child: Image.network(
-                      'https://everydayicons.jp/wp/wp-content/themes/everydayicons/icons/thumbs/ei-child_face.png',
-                      height: 60.0,
-                      width: 60.0,
-                    ),
+                    child: Image.asset('images/appstore.png'),
                   ),
                   const SizedBox(
                     width: 30,

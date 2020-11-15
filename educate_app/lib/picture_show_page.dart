@@ -16,7 +16,7 @@ class _PictureShowState extends State<PictureShow> {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.cyan[300],
-        leading: Icon(Icons.videocam),
+        leading: Icon(Icons.note),
         title: const Text(
           'Note一覧',
           textAlign: TextAlign.start,
@@ -53,11 +53,7 @@ class _PictureShowState extends State<PictureShow> {
                   SizedBox(
                     width: 60,
                     height: 60,
-                    child: Image.network(
-                      'https://everydayicons.jp/wp/wp-content/themes/everydayicons/icons/thumbs/ei-child_face.png',
-                      height: 60.0,
-                      width: 60.0,
-                    ),
+                    child: Image.asset('images/appstore.png'),
                   ),
                   const SizedBox(
                     width: 30,
