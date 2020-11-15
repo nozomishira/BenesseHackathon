@@ -1,9 +1,12 @@
+
 import 'dart:io';
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:adaptive_action_sheet/adaptive_action_sheet.dart';
+
+
 
 void main(){
   runApp(
@@ -81,11 +84,14 @@ class _RegisterNotePageState extends State<RegisterNotePage> {
     return MaterialApp(
 
       home: Scaffold(
+
         backgroundColor: Colors.white,
+
 
         body: SafeArea(
           child: Column(
           children: [
+
             SizedBox(height: 10.0),
             Row(
               crossAxisAlignment: CrossAxisAlignment.center,
@@ -142,6 +148,8 @@ class _RegisterNotePageState extends State<RegisterNotePage> {
 
             )
 
+
+
           ],
 
       ),
@@ -149,7 +157,16 @@ class _RegisterNotePageState extends State<RegisterNotePage> {
         ),
       ),
     );
+
   }
+//     //画像を圧縮
+//     final File compressedFile = await FlutterNativeImage.compressImage(
+//         imageFile.path,
+//         quality: quality);
+//
+//     return compressedFile;
+//   }
+// }
 }
 
 //カメラ、ギャラリーからのアップロードはここでやる

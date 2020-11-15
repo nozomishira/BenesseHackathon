@@ -20,11 +20,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="70fc97e9-58e0-48c9-96f2-ca0b81212a37" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/educate_app/ios/Runner.xcodeproj/project.pbxproj" beforeDir="false" afterPath="$PROJECT_DIR$/educate_app/ios/Runner.xcodeproj/project.pbxproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/educate_app/ios/Runner.xcworkspace/contents.xcworkspacedata" beforeDir="false" afterPath="$PROJECT_DIR$/educate_app/ios/Runner.xcworkspace/contents.xcworkspacedata" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/educate_app/ios/Runner/Info.plist" beforeDir="false" afterPath="$PROJECT_DIR$/educate_app/ios/Runner/Info.plist" afterDir="false" />
+
+      <change afterPath="$PROJECT_DIR$/.idea/BenesseHackathon.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Dart_SDK.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/educate_app/ios/Flutter/Debug.xcconfig" beforeDir="false" afterPath="$PROJECT_DIR$/educate_app/ios/Flutter/Debug.xcconfig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/educate_app/ios/Flutter/Release.xcconfig" beforeDir="false" afterPath="$PROJECT_DIR$/educate_app/ios/Flutter/Release.xcconfig" afterDir="false" />
+>
       <change beforePath="$PROJECT_DIR$/educate_app/lib/register_page.dart" beforeDir="false" afterPath="$PROJECT_DIR$/educate_app/lib/register_page.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/educate_app/pubspec.lock" beforeDir="false" afterPath="$PROJECT_DIR$/educate_app/pubspec.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/educate_app/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/educate_app/pubspec.yaml" afterDir="false" />
@@ -102,6 +106,7 @@
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="220" y="23" width="1240" height="700" key="AVDManager/0.0.1440.900@0.0.1440.900" timestamp="1605337591380" />
+
     <state width="644" height="288" key="GridCell.Tab.0.bottom" timestamp="1605372686938">
       <screen x="30" y="23" width="1410" height="877" />
     </state>
@@ -122,10 +127,33 @@
     </state>
     <state width="1398" height="238" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1605340790430" />
     <state width="644" height="288" key="GridCell.Tab.0.right/30.23.1410.877@30.23.1410.877" timestamp="1605372686937" />
+
+    <state width="921" height="238" key="GridCell.Tab.0.bottom" timestamp="1605346982350">
+      <screen x="30" y="23" width="1410" height="877" />
+    </state>
+    <state width="1398" height="238" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1605340790432" />
+    <state width="921" height="238" key="GridCell.Tab.0.bottom/30.23.1410.877@30.23.1410.877" timestamp="1605346982350" />
+    <state width="921" height="238" key="GridCell.Tab.0.center" timestamp="1605346982349">
+      <screen x="30" y="23" width="1410" height="877" />
+    </state>
+    <state width="1398" height="238" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1605340790420" />
+    <state width="921" height="238" key="GridCell.Tab.0.center/30.23.1410.877@30.23.1410.877" timestamp="1605346982349" />
+    <state width="921" height="238" key="GridCell.Tab.0.left" timestamp="1605346982345">
+      <screen x="30" y="23" width="1410" height="877" />
+    </state>
+    <state width="1398" height="238" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1605340790416" />
+    <state width="921" height="238" key="GridCell.Tab.0.left/30.23.1410.877@30.23.1410.877" timestamp="1605346982345" />
+    <state width="921" height="238" key="GridCell.Tab.0.right" timestamp="1605346982349">
+      <screen x="30" y="23" width="1410" height="877" />
+    </state>
+    <state width="1398" height="238" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1605340790430" />
+    <state width="921" height="238" key="GridCell.Tab.0.right/30.23.1410.877@30.23.1410.877" timestamp="1605346982349" />
+
     <state x="90" y="100" key="SettingsEditor" timestamp="1605332139760">
       <screen x="34" y="23" width="1406" height="877" />
     </state>
     <state x="90" y="100" key="SettingsEditor/34.23.1406.877@34.23.1406.877" timestamp="1605332139760" />
+
     <state x="168" y="123" width="763" height="677" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1605373183346">
       <screen x="30" y="23" width="1410" height="877" />
     </state>
@@ -134,6 +162,12 @@
       <screen x="30" y="23" width="1410" height="877" />
     </state>
     <state x="250" y="213" width="672" height="676" key="search.everywhere.popup/30.23.1410.877@30.23.1410.877" timestamp="1605364486675" />
+
+    <state x="250" y="213" width="672" height="676" key="search.everywhere.popup" timestamp="1605336132076">
+      <screen x="30" y="23" width="1410" height="877" />
+    </state>
+    <state x="250" y="213" width="672" height="676" key="search.everywhere.popup/30.23.1410.877@30.23.1410.877" timestamp="1605336132076" />
+
     <state x="253" y="213" width="670" height="676" key="search.everywhere.popup/34.23.1406.877@34.23.1406.877" timestamp="1605335041777" />
   </component>
 </project>
