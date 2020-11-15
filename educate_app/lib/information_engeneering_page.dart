@@ -16,9 +16,9 @@ class _InformationEngineeringPageState
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        leading: Icon(Icons.videocam),
+        leading: Icon(Icons.event),
         title: const Text(
-          'Note一覧',
+          'イベント一覧',
           textAlign: TextAlign.start,
         ),
         actions: <Widget>[
@@ -52,11 +52,7 @@ class _InformationEngineeringPageState
                   SizedBox(
                     width: 60,
                     height: 60,
-                    child: Image.network(
-                      'https://everydayicons.jp/wp/wp-content/themes/everydayicons/icons/thumbs/ei-child_face.png',
-                      height: 60.0,
-                      width: 60.0,
-                    ),
+                    child: Image.asset('images/appstore.png'),
                   ),
                   const SizedBox(
                     width: 30,

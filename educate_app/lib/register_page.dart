@@ -71,7 +71,7 @@ class _RegisterNotePageState extends State<RegisterNotePage> {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-        backgroundColor: Colors.white,
+        backgroundColor: Colors.cyan[50],
         body: SafeArea(
           child: ListView(
             children: [
@@ -84,7 +84,7 @@ class _RegisterNotePageState extends State<RegisterNotePage> {
                     child: FlatButton(
                         onPressed: null,
                         child: Text('キャンセル'),
-                        color: Colors.white),
+                        color: Colors.black),
                   ),
                   Padding(
                     padding: const EdgeInsets.only(left: 100.0),
